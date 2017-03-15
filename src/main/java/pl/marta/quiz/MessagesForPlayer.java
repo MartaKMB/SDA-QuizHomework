@@ -2,7 +2,6 @@ package pl.marta.quiz;
 
 import java.util.List;
 import java.util.Scanner;
-import java.util.function.Consumer;
 
 public class MessagesForPlayer {
 
@@ -34,24 +33,10 @@ public class MessagesForPlayer {
 
         List<String> answers = question.getAnswers();
 
-//        from this place not all is for me clear:
-
         char prefix = 'a';
 
-//        Consumer interface represents an operation that accepts a single input argument and returns no result.
-
-        answers.forEach(new Consumer<String>() {
-
-            @Override
-            public void accept(String s) {
-                System.out.println(s);
-            }
-        });
-
-        answers.forEach(e -> System.out.println(e));
-
         for (int i = 0; i < answers.size(); i++) {
-            System.out.println((char) (prefix +1) + ". " + answers.get(i));
+            System.out.println((char) (prefix + i) + ". " + answers.get(i));
         }
 
         System.out.println("Enter your answer: ");
@@ -106,13 +91,6 @@ public class MessagesForPlayer {
 
         Scanner sc = new Scanner(System.in);
         sc.nextLine();
-
-        /*
-//      this is not clear for me:
-        List<String> strings = Arrays.asList("ad", "ASd");
-        strings.forEach(e -> System.out.println(e));
-        */
-
 
     }
 }

@@ -11,7 +11,8 @@ public class OperationsFromFile implements QuizOperations {
     public List<Questions> questionsFromFileAsList(File fileQuestions) throws FileNotFoundException {
         List<Questions> questions = new ArrayList<>();
 
-        Scanner sc = new Scanner(fileQuestions);
+//        Scanner sc = new Scanner(fileQuestions); - changed for below, because using this, file seems empty
+        Scanner sc = new Scanner(fileQuestions,"ISO-8859-1");
 
         while (sc.hasNext()) {
             Questions question = new Questions();

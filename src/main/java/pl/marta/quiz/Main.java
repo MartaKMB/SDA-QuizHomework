@@ -32,8 +32,6 @@ public class Main {
                     messagesForPlayer.beforeTheStart();
                     int correctAnswers = 0;
 
-//                    it doesn't run through this for
-
                     for (int i = 0; i < questions.size(); i++) {
                         boolean answer = messagesForPlayer.printQuestion(questions.get(i));
 
